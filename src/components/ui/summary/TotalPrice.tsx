@@ -28,7 +28,7 @@ const TotalPrice: React.FC<{
   }
 
   return (
-    <div className="p-8 flex justify-between items-center">
+    <div className="py-8 px-3 md:p-8 flex justify-between items-center">
       <h1 className="text-cool_gray font-semibold">
         Total (per {props.option.slice(0, -2)})
       </h1>

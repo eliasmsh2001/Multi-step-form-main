@@ -24,16 +24,19 @@ const Summary: React.FC = () => {
   return (
     <motion.main
       variants={{
-        hidden: { opacity: 0, display: "none" },
-        visible: { opacity: 1, display: "block", transition: { delay: 0.7 } },
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: { duration: 0.6 },
+        },
       }}
       initial="hidden"
       animate="visible"
-      exit="hidden"
-      transition={{ type: "spring", duration: 0.6 }}
-      className="  w-full md:w-3/4 lg:ml-10 md:p-10"
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+      className="w-full md:w-3/4 lg:ml-10 md:p-10"
     >
-      <div className="  flex flex-col justify-between h-full md:w-[63vw] lg:w-[60vw] xl:w-[50vw] 2xl:w-[40vw] p-10 lg:ml-7 ">
+      <div className="  flex flex-col justify-between h-full md:w-[63vw] lg:w-[60vw] xl:w-[50vw] 2xl:w-[40vw] p-4 md:p-3 lg:ml-7 ">
         <div className="w-full">
           <Header
             title="Finishing up"

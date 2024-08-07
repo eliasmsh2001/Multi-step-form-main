@@ -11,7 +11,8 @@ const AddOnsCardsContainer: React.FC = () => {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
       }}
-      transition={{ staggerChildren: 0.1, delayChildren: 1.1 }}
+      exit={{ opacity: 1 }}
+      transition={{ staggerChildren: 0.1, delayChildren: 0.3 }}
       className="flex flex-col gap-5 mt-6"
     >
       {addOnsData.map((item) => (

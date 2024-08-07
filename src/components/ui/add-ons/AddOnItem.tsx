@@ -41,6 +41,7 @@ const AddOnItem: React.FC<{ addOn: AddOn }> = (props) => {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
       }}
+      exit={{ opacity: 1 }}
       onClick={selectAddOnHandler}
       className={clsx(
         "flex items-center justify-between md:h-24 lg:h-20 py-2 px-5 w-full border-2 border-light_gray  rounded-xl cursor-pointer",
@@ -64,8 +65,10 @@ const AddOnItem: React.FC<{ addOn: AddOn }> = (props) => {
           )}
         ></span>
         <div>
-          <h1 className="text-marine_blue font-bold">{props.addOn.title}</h1>
-          <h2 className="text-cool_gray font-semibold">
+          <h1 className="text-marine_blue font-bold text-sm md:text-base">
+            {props.addOn.title}
+          </h1>
+          <h2 className="text-cool_gray font-semibold text-xs md:text-base">
             {props.addOn.description}
           </h2>
         </div>

@@ -26,7 +26,7 @@ const PlanCart: React.FC<{
 
   return (
     <>
-      <div className="bg-alabaster p-8">
+      <div className="bg-alabaster p-3 py-5 md:p-8">
         <div className="flex justify-between items-center mb-1">
           <div>
             <h1 className="text-xl font-bold text-marine_blue">

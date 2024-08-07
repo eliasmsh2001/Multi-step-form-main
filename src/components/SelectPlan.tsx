@@ -29,14 +29,16 @@ const SelectPlan: React.FC = () => {
   return (
     <motion.main
       variants={{
-        hidden: { opacity: 0, display: "none" },
-        visible: { opacity: 1, display: "block", transition: { delay: 0.7 } },
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+        },
       }}
       initial="hidden"
       animate="visible"
-      exit="hidden"
-      transition={{ type: "spring", duration: 0.6 }}
-      className=" md:h-full w-full md:w-3/4 lg:ml-10 md:p-10"
+      transition={{ duration: 1 }}
+      exit={{ opacity: 0 }}
+      className=" md:h-full w-full md:w-3/4 lg:ml-10 md:p-3"
     >
       {errorNotification && (
         <motion.div
@@ -44,8 +46,9 @@ const SelectPlan: React.FC = () => {
             hidden: { opacity: 0, scale: 0.9 },
             visible: { opacity: 1, scale: 1 },
           }}
+          exit={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", duration: 0.5 }}
-          className="md:absolute w-96 md:right-6 m-auto mt-2 md:m-0"
+          className="md:absolute w-[90%]  md:w-96 md:right-6 m-auto mt-2 md:m-0"
         >
           <Alert variant="destructive">
             <AlertCircle className="h-4 w-4" />
@@ -54,7 +57,14 @@ const SelectPlan: React.FC = () => {
           </Alert>
         </motion.div>
       )}
-      <div className=" flex flex-col justify-between h-full md:w-[63vw] lg:w-[60vw] xl:w-[50vw] 2xl:w-[40vw] p-5 md:p-10 lg:ml-7 relative">
+      <motion.div
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+        }}
+        exit={{ opacity: 1 }}
+        className=" flex flex-col justify-between w-full h-full md:w-[63vw] lg:w-[60vw] xl:w-[50vw] 2xl:w-[40vw] p-5 md:p-10 lg:ml-7 relative"
+      >
         <div className="w-full">
           <Header
             title="Select your plan"
@@ -69,7 +79,7 @@ const SelectPlan: React.FC = () => {
           nextTitle="Next Step"
           backTitle="Go Back"
         />
-      </div>
+      </motion.div>
     </motion.main>
   );
 };

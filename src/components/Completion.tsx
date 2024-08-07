@@ -6,13 +6,15 @@ const Completion: React.FC = () => {
   return (
     <motion.main
       variants={{
-        hidden: { opacity: 0, display: "none" },
-        visible: { opacity: 1, display: "flex", transition: { delay: 0.7 } },
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+        },
       }}
       initial="hidden"
       animate="visible"
-      exit="hidden"
-      transition={{ type: "spring", duration: 0.6 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
       className="w-full h-full flex flex-col p-10 justify-center items-center"
     >
       <div className="md:w-1/2 flex  flex-col justify-center items-center gap-5">

@@ -30,9 +30,9 @@ module.exports = {
         white: "var(--White)",
       },
       backgroundImage: {
-        desktopBg: "url('../../assets/images/bg-sidebar-desktop.svg')",
-        mobileBg: "url('../../assets/images/bg-sidebar-mobile.svg')",
-        checkmark: "url('../../../../assets/images/icon-checkmark.svg')",
+        desktopBg: "url('../images/bg-sidebar-desktop.svg')",
+        mobileBg: "url('../images/bg-sidebar-mobile.svg')",
+        checkmark: "url('../images/icon-checkmark.svg')",
       },
     },
   },
